@@ -2,6 +2,10 @@
 This is a minetest mod to allow farming of
 fishes and jellyfishes.
 
+## license
+* code: [](LGPL 2.1+ free software license)
+* textures: 
+
 ## install
 1. Download
 2. extract the package
