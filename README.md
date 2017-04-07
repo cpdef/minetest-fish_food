@@ -23,9 +23,8 @@ With a left click on a fish or jellyfish there spawns a second fish/jellyfish by
 
 ## crafting
 ### unfinished fish_food:
-|  |  |  |
-|--|--|--|
 | "farming:seed_wheat" | "default:apple" | "fish_food:leave_dust" |
+|--|--|--|
 | "fish_food:leave_dust" | "farming:seed_wheat" | "dye:red" |
 | "dye:red" | "fish_food:leave_dust" | "default:apple"|
 
