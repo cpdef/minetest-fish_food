@@ -12,6 +12,7 @@ fishes and jellyfishes.
 2. extract the package
 3. rename the minetest-fish_food folder too fish_food
 4. move the fish_food folder into your minetest mod folder (on linux (most times): ~/.minetest/mods/)
+5. (optional) remove the screenshot folder if u don't need to look at the screenshots, or if u wanna have more free space
 
 ## depends
 | modname  |  download link   | forum link |
