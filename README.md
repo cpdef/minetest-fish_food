@@ -23,28 +23,25 @@ With a left click on a fish or jellyfish there spawns a second fish/jellyfish by
 
 ## crafting
 ### unfinished fish_food:
-| "farming:seed_wheat" | "default:apple" | "fish_food:leave_dust" |
+|  |  |  |
 |--|--|--|
+| "farming:seed_wheat" | "default:apple" | "fish_food:leave_dust" |
 | "fish_food:leave_dust" | "farming:seed_wheat" | "dye:red" |
 | "dye:red" | "fish_food:leave_dust" | "default:apple"|
 
+### fish_food:
+#### with technic mod:
+compress the unfinished fish_food
+#### without
+cook the unfinished fish_food
 
-if technic then
-        technic.register_grinder_recipe({ input = { "group:leaves" }, output = "fish_food:leave_dust 1" })
-	technic.register_compressor_recipe({ input = { "fish_food:unfinished_fish_food" }, output = "fish_food:fish_food" })
-else
-        minetest.register_craft( {
-        output = "fish_food:leave_dust 1",
-                recipe = {
-                        { "group:leaves", "", "group:leaves" },
-                        { "", "group:leaves", ""},
-			{ "group:leaves", "", "group:leaves"},
-                },
-        })
-	minetest.register_craft({
-                type = "cooking",
-                output = "fish_food:fish_food",
-                recipe = "fish_food:unfinished_fish_food",
-                cooktime = 10,
-        })
-end
+### leave_dust
+#### with technic mod:
+grind any leaves (in group:leaves)
+#### without
+|  |  |  |
+|--|--|--|
+| leave |  | leave |
+|  | leave |  |
+| leave |  | leave |
+
