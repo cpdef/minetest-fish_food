@@ -11,7 +11,7 @@ fishes and jellyfishes.
 ## depends
 | modname  |  download link   | forum link |
 |----------|------------------|------------|
-| mobs | | |
-| mobs_fish (from mobs_water modpack) | | https://forum.minetest.net/viewtopic.php?f=9&t=12652&hilit=water+critters |
-mobs_jellyfish (from mobs_water modpack) | | https://forum.minetest.net/viewtopic.php?f=9&t=12652&hilit=water+critters |
-| technic (optional) | | |
+| mobs | https://github.com/tenplus1/mobs_redo/archive/master.zip | https://forum.minetest.net/viewtopic.php?f=11&t=9917&hilit=mobs+redo |
+| mobs_fish (from mobs_water modpack) | https://github.com/blert2112/mobs_water/archive/master.zip | https://forum.minetest.net/viewtopic.php?f=9&t=12652&hilit=water+critters |
+mobs_jellyfish (from mobs_water modpack) | https://github.com/blert2112/mobs_water/archive/master.zip | https://forum.minetest.net/viewtopic.php?f=9&t=12652&hilit=water+critters |
+| technic (optional) | https://github.com/minetest-mods/technic/archive/master.zip | https://forum.minetest.net/viewtopic.php?f=11&t=2538&hilit=technic |
