@@ -1,5 +1,6 @@
 # minetest mod fish_food
-This is a minetest mod to allow farming of
+This is a minetest mod,
+which allows farming of
 fishes and jellyfishes.
 
 ## license
