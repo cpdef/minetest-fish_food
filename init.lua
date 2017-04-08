@@ -8,31 +8,49 @@ fish_food.feedable_fishes["mobs_fish:clownfish"] = 10
 fish_food.feedable_fishes["mobs_fish:tropical"] = 7
 --print(dump(fish_food.feedable_fishes))
 
+local feed_fish = function(obj)
+        --print('FEED FISH', dump(obj))
+	local entity = obj:get_luaentity()
+	--print(dump(entity))
+	--print(entity.name)
+	for fish, spawnchance in pairs(fish_food.feedable_fishes) do
+		--print(fish, spawnchance)
+		if entity.name == fish then
+			local rnd = math.random(100)
+			--print(rnd)
+			if rnd >= (100-spawnchance) then
+				minetest.add_entity(obj:getpos(), entity.name)
+			end
+		end
+		--print(entity.name, fish, entity.name == fish)
+	end
+end
 
 minetest.register_craftitem("fish_food:fish_food", {
 	description = "fish food",
 	inventory_image = "fish_food.png",
+	liquids_pointable = true,
 	on_use = function(itemstack, user, pointed_thing)
+		local pos = minetest.get_pointed_thing_position(pointed_thing, true)
+				
+		--feed pointed fish
 		if pointed_thing.ref then
 		        local obj = pointed_thing.ref
-			local entity = obj:get_luaentity()
-			--print(dump(entity))
-			print(entity.name)
-			for fish, spawnchance in pairs(fish_food.feedable_fishes) do
-			        --print(fish, spawnchance)
-			        if entity.name == fish then
-				        local rnd = math.random(100)
-					--print(rnd)
-			                if rnd >= (100-spawnchance) then
-			                        minetest.add_entity(obj:getpos(), entity.name)
-				        end
-					itemstack:take_item(1)
-					return itemstack
-				end
-				--print(entity.name, fish, entity.name == fish)
-			end
-			return itemstack
+			feed_fish(obj, itemstack)
 		end
+		
+		--feed all fishes in radius 4
+		local all_objects = minetest.get_objects_inside_radius(pos, 4)
+                local _,obj
+                for i,obj in ipairs(all_objects) do
+		        if ( not obj:is_player() ) and ( not (i > 10) ) then
+		                feed_fish(obj)
+			end
+	        end
+		
+		--return
+		itemstack:take_item(1)
+		return itemstack
 	end,
 })
 
