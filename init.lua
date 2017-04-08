@@ -75,7 +75,7 @@ minetest.register_craft( {
 })
 
 if technic then
-        technic.register_grinder_recipe({ input = { "group:leaves" }, output = "fish_food:leave_dust 1" })
+        technic.register_grinder_recipe({ input = { "default:leaves" }, output = "fish_food:leave_dust 1" })
 	technic.register_compressor_recipe({ input = { "fish_food:unfinished_fish_food" }, output = "fish_food:fish_food" })
 else
         minetest.register_craft( {
