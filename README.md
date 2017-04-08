@@ -1,4 +1,7 @@
 # minetest mod fish_food
+
+![screenshot](https://github.com/cpdef/minetest-fish_food/blob/master/screenshot.png?raw=true)
+
 This is a minetest mod,
 which allows farming of
 fishes and jellyfishes.
