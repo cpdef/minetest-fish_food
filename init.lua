@@ -32,7 +32,8 @@ minetest.register_craftitem("fish_food:fish_food", {
 	liquids_pointable = true,
 	on_use = function(itemstack, user, pointed_thing)
 		local pos = minetest.get_pointed_thing_position(pointed_thing, true)
-				
+                if pos == nil then return end	
+			
 		--feed pointed fish
 		if pointed_thing.ref then
 		        local obj = pointed_thing.ref
